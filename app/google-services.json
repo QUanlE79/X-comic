@@ -1,41 +1,33 @@
 {
   "project_info": {
-    "project_number": "59269077698",
-    "project_id": "x-comic",
-    "storage_bucket": "x-comic.appspot.com"
+    "project_number": "487181028520",
+    "project_id": "x-comic-db",
+    "storage_bucket": "x-comic-db.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:59269077698:android:dc2c44fe06c4e70e4b795b",
+        "mobilesdk_app_id": "1:487181028520:android:a67bebc7f8e5ae5793c69d",
         "android_client_info": {
           "package_name": "com.example.x_comic"
         }
       },
       "oauth_client": [
         {
-          "client_id": "59269077698-spald76545l4dv6304n5do0kebho7bml.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.x_comic",
-            "certificate_hash": "8b0287de19d3c5e657c276f29faae9807668e4c4"
-          }
-        },
-        {
-          "client_id": "59269077698-5jvm985qj7jbqt4fk120ibtrahjto8iv.apps.googleusercontent.com",
+          "client_id": "487181028520-ck0hf25tlis7stl6t7l7p1hcfnnbh2gu.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBxuc6wWx4eNtHYvKTxSqZ8NPM6Y9z3Zco"
+          "current_key": "AIzaSyDxUYqYPc_Jsf4NKrVWI9SfI-F_X0leqgA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "59269077698-5jvm985qj7jbqt4fk120ibtrahjto8iv.apps.googleusercontent.com",
+              "client_id": "487181028520-ck0hf25tlis7stl6t7l7p1hcfnnbh2gu.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

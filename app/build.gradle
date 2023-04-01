@@ -78,15 +78,7 @@ dependencies {
 
     //tab sync
     implementation 'io.github.ahmad-hamwi:tabsync:1.0.1'
-
-    //expandable layout
-    implementation 'com.github.aakira:expandable-layout:1.6.0@aar'
-
-    //flex box
-    implementation 'com.google.android.flexbox:flexbox:3.0.0'
-
     implementation 'com.google.firebase:firebase-auth-ktx:21.2.0'
-
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'

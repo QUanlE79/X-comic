@@ -1,4 +1,4 @@
-package com.example.x_comic.views.main.fragments
+package com.example.x_comic.views.post
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,10 +11,10 @@ private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 /**
  * A simple [Fragment] subclass.
- * Use the [Explore.newInstance] factory method to
+ * Use the [PostNewActivity.newInstance] factory method to
  * create an instance of this fragment.
  */
-class Explore : Fragment() {
+class PostNewActivity : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -32,7 +32,7 @@ class Explore : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_explore, container, false)
+        return inflater.inflate(R.layout.activity_post_new, container, false)
     }
 
     companion object {
@@ -47,7 +47,7 @@ class Explore : Fragment() {
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            Explore().apply {
+            PostNewActivity().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

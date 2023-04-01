@@ -51,7 +51,6 @@ class Home : Fragment() {
         Avatar("vivianneee", R.drawable.avatar_5),
         Avatar("pixiequinn", R.drawable.avatar_6),
         Avatar("rhjulxie", R.drawable.avatar_7),
-
     )
 
     var bookDetailList: MutableList<Book> = mutableListOf(
@@ -175,8 +174,6 @@ class Home : Fragment() {
         println(bookLatestList.iterator());
         println(bookCompletedList.iterator());
         println(tabsBook[1].iterator());
-
-
         customSlideView!!.adapter = adapter;
         customAvatarView!!.adapter = avatarAdapter;
         customBookListView!!.adapter = bookListAdapter;

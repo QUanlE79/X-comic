@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.main.fragments.Home">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/pattern">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/backBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:text="◁"
+            android:textSize="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/shareBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:text="︙"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:textAlignment="center">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/currentCard"
+                        android:layout_width="200dp"
+                        android:layout_height="260dp"
+                        android:elevation="0dp"
+
+                        android:layout_marginTop="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/book"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+
+                            android:clipToOutline="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/bookcover"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.cardview.widget.CardView>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <ImageView
+                            android:id="@+id/background"
+                            android:layout_width="match_parent"
+                            android:layout_height="260dp"
+                            android:scaleType="fitStart"
+                            android:src="@drawable/background" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
+
+
+
+
+                            android:layout_marginBottom="30dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            app:cardBackgroundColor="#E6FFFFFF"
+                            >
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp">
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp">
+
+                    <TextView
+                        android:id="@+id/book_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginTop="4dp"
+                        android:text="How to Burn The Bad Boy"
+
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/book_author"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="alsophanie"
+                        android:textAlignment="center"
+                        android:textSize="16dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/book_title" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toBottomOf="@id/book_author"
+                        tools:layout_editor_absoluteX="30dp">
+
+                        <ImageView
+                            android:id="@+id/viewIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:srcCompat="@drawable/ic_view"
+                            tools:layout_editor_absoluteY="49dp" />
+
+                        <TextView
+                            android:id="@+id/viewTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="200K view"
+                            android:textAlignment="center" />
+
+                        <ImageView
+                            android:id="@+id/favoriteIcon"
+                            android:layout_width="20dp"
+                            android:layout_height="match_parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:srcCompat="@drawable/favorite_icon"
+                            tools:layout_editor_absoluteY="49dp" />
+
+                        <TextView
+                            android:id="@+id/favoriteTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="167K"
+                            android:textAlignment="center" />
+
+                        <ImageView
+                            android:id="@+id/chapterIcon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:srcCompat="@drawable/ic_list_chapter"
+                            tools:layout_editor_absoluteY="49dp" />
+
+                        <TextView
+                            android:id="@+id/numOfChapterTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="4 Chapters"
+                            android:textAlignment="center" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/readBtn"
+                        android:layout_width="176dp"
+                        android:layout_height="52dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/readbutton"
+                        android:padding="10dp"
+                        android:text="READ"
+                        android:textColor="@color/azure"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/favorBtn"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/favorBtn"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="48dp"
+                        android:background="@drawable/favorbutton"
+                        android:padding="10dp"
+                        android:text="ღ"
+                        android:textColor="@color/love"
+                        android:textSize="15dp"
+                        android:textStyle=""
+
+                        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:editable="false"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text=""
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/readBtn" />
+
+                    <TextView
+                        android:id="@+id/statusTextView"
+                        android:layout_width="275dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="Status: "
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+                    <TextView
+                        android:id="@+id/ageTextView"
+                        android:layout_width="275dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="Age: "
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/statusTextView" />
+                    <TextView
+                        android:id="@+id/ratingTextView"
+                        android:layout_width="275dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="Rating: "
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ageTextView" />
+
+
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout2"
+                        android:layout_width="275dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ratingTextView">
+
+                        <TextView
+                            android:layout_marginEnd="10dp"
+                            android:id="@+id/cateTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Categories"
+                            app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+                        <TextView
+                            android:id="@+id/category_tag"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+
+                            android:layout_weight="1"
+                            android:background="@drawable/badge"
+                            android:backgroundTint="@color/love"
+                            android:clickable="true"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="Romance"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/category_tag2"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+
+                            android:layout_weight="1"
+                            android:background="@drawable/badge"
+                            android:backgroundTint="@color/yellow_green"
+                            android:clickable="true"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="Fiction"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/category_tag3"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+
+                            android:layout_weight="1"
+                            android:background="@drawable/badge"
+                            android:backgroundTint="@color/light_blue"
+                            android:clickable="true"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="Short Story"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/rest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+
+                            />
+                    </LinearLayout>
+
+
+
+                    <TextView
+                        android:layout_margin="5dp"
+                        android:id="@+id/descTextView"
+                        android:layout_width="275dp"
+                        android:layout_height="wrap_content"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in consequat magna, in tincidunt risus. Vestibulum sodales posuere bibendum. Proin eu iaculis risus. Suspendisse ultricies vulputate velit a fermentum. Etiam luctus sagittis mauris, nec consequat mauris pellentesque a. Nulla consequat egestas diam, id venenatis lorem ultrices vel. Donec vestibulum at justo at elementum. Morbi a congue dui. Nunc rutrum metus non tellus commodo mattis. Donec pharetra maximus leo vel facilisis. Morbi id rutrum lacus. Quisque bibendum dolor at odio hendrerit, a ullamcorper nisl vehicula. Donec et tincidunt diam.
+
+Vestibulum ornare odio dolor. Nunc congue pulvinar feugiat. Curabitur tincidunt diam vel elit blandit dapibus. Phasellus convallis molestie sem, nec pulvinar justo lacinia viverra. Proin euismod at sapien a hendrerit. Aliquam vitae ante in nisi pretium laoreet. Curabitur eu mattis arcu, eget viverra urna. Aliquam facilisis odio non erat sodales eleifend. Etiam eget orci id justo convallis condimentum. Duis orci ante, sodales at efficitur sit amet, vulputate vitae augue."
+                        android:singleLine="false"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal"
+                    android:background="@drawable/border">
+
+
+                    <EditText
+                        android:id="@+id/chooseChapterBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:clickable="true"
+                        android:text="☰ 4 Chapters"
+                        android:editable="false"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal"
+                    >
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/ratingBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ratingbutton"
+                        android:padding="10dp"
+                        android:textColor="@color/golden"
+                        android:textSize="15dp"
+                        android:textStyle="italic"
+
+                        android:clickable="true"
+                        android:text="☆ Leave a rating ☆"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </LinearLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp">
+
+                    <TextView
+                        android:id="@+id/for_you"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="For You"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/view_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:text="View more"
+                        android:textSize="12sp"
+                        android:textStyle="italic"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/listView"
+                    android:layout_width="match_parent"
+                    android:layout_height="259dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    app:layout_constraintTop_toBottomOf="@+id/for_you">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
