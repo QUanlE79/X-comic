@@ -13,10 +13,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        replaceFragment(Home())
+        replaceFragment(Home(this))
         binding.bottomNavigationView.setOnItemSelectedListener {
             when (it.itemId) {
-                R.id.home -> replaceFragment(Home())
+                R.id.home -> replaceFragment(Home(this))
                 R.id.explore -> replaceFragment(Explore())
                 R.id.library -> replaceFragment(Library())
                 R.id.writing -> replaceFragment(Writing())
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun replaceFragment(fragment: Fragment){
+    fun replaceFragment(fragment: Fragment){
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.frameLayout,fragment)

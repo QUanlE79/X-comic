@@ -1,5 +1,6 @@
 package com.example.x_comic.views.main.fragments
 
+import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -27,7 +28,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [Home.newInstance] factory method to
  * create an instance of this fragment.
  */
-class Home : Fragment() {
+class Home(private val context: Activity) : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -168,7 +169,7 @@ class Home : Fragment() {
         tabLayout!!.addTab(tabLayout!!.newTab().setText("Completed"))
         val adapter = ListAdapterSlideshow(bookList);
         val avatarAdapter = AvatarListAdapter(avatarList);
-        val bookListAdapter = BookListAdapter(bookDetailList);
+        val bookListAdapter = BookListAdapter(context, bookDetailList);
 
 
         println(bookDetailList.iterator());
@@ -246,7 +247,7 @@ class Home : Fragment() {
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            Home().apply {
+            Home(Activity()).apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
