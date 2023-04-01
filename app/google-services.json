@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "487181028520",
+    "project_id": "x-comic-db",
+    "storage_bucket": "x-comic-db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:487181028520:android:a67bebc7f8e5ae5793c69d",
+        "android_client_info": {
+          "package_name": "com.example.x_comic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "487181028520-ck0hf25tlis7stl6t7l7p1hcfnnbh2gu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxUYqYPc_Jsf4NKrVWI9SfI-F_X0leqgA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "487181028520-ck0hf25tlis7stl6t7l7p1hcfnnbh2gu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
