@@ -1,16 +1,14 @@
 package com.example.x_comic.views.main.fragments
 
-import android.media.Image
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.CheckBox
-import android.widget.FrameLayout
 import android.widget.ImageButton
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.x_comic.R
 import com.example.x_comic.adapters.CategoryAdapter
@@ -20,19 +18,20 @@ import com.google.android.flexbox.FlexDirection
 import com.google.android.flexbox.FlexWrap
 import com.google.android.flexbox.FlexboxLayoutManager
 
-
+// TODO: Rename parameter arguments, choose names that match
+// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
+
 /**
  * A simple [Fragment] subclass.
- * Use the [Explore.newInstance] factory method to
+ * Use the [Filter.newInstance] factory method to
  * create an instance of this fragment.
  */
-class Explore : Fragment() {
+class Filter : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,11 +41,10 @@ class Explore : Fragment() {
         }
     }
 
-
     val category_list: MutableList<String> = mutableListOf("Romance","Poetry","Science Fiction","Teen Fiction","Short Story","Mystery","Adventure","Thriller","Horror","Humor","LGBT+","Non Fiction","Fanfiction","Historical Fiction","Contemporary Lit","Diverse Lit","Fantasy","Paranormal","New Adult")
     var btnLength: TextView? = null;
     var btnStatus: TextView? = null;
-    var searchBtn: ImageButton? = null;
+    var searchBtn: Button? = null;
     var layoutExpand2 : ExpandableRelativeLayout? = null;
     var layoutExpand: ExpandableRelativeLayout? = null;
 
@@ -56,7 +54,8 @@ class Explore : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_explore, container, false)
+        // Inflate the layout for this fragment
+        val view = inflater.inflate(R.layout.fragment_filter, container, false)
         categoryView = view.findViewById(R.id.category_list);
         val adapter = CategoryAdapter(category_list);
         searchBtn = view.findViewById(R.id.searchBtn);
@@ -112,9 +111,9 @@ class Explore : Fragment() {
             val fragmentManager = requireActivity().supportFragmentManager
             val transaction = fragmentManager.beginTransaction()
             //transaction.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
-            transaction.detach(Explore());
-            transaction.remove(Explore());
-            transaction.replace(R.id.exploreLayout, fragment)
+            transaction.detach(Filter());
+            transaction.remove(Filter());
+            transaction.replace(R.id.filterLayout, fragment)
             transaction.addToBackStack(null)
             transaction.commit()
 
@@ -212,12 +211,12 @@ class Explore : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment Explore.
+         * @return A new instance of fragment Filter.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            Explore().apply {
+            Filter().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

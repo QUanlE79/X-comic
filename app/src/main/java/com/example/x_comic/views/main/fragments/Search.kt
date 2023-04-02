@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.FrameLayout
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -118,6 +120,24 @@ class Search : Fragment() {
             DividerItemDecoration(this.context, DividerItemDecoration.VERTICAL)
         customBookListView?.addItemDecoration(itemDecoration)
 
+        val btnFilter: ImageButton = view.findViewById(R.id.btnFilter);
+
+        btnFilter.setOnClickListener{
+            val fragment = Filter();
+
+           val oldFragment: FrameLayout = view.findViewById(R.id.searchLayout);
+           oldFragment.removeAllViews();
+
+
+            val fragmentManager = requireActivity().supportFragmentManager
+            val transaction = fragmentManager.beginTransaction()
+            transaction.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+            transaction.detach(Search());
+            transaction.remove(Search());
+            transaction.replace(R.id.searchLayout, fragment)
+            transaction.addToBackStack(null)
+            transaction.commit()
+        }
 
         return view
     }

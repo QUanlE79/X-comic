@@ -195,6 +195,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/azure"
+                android:fontFamily="@font/poppins"
                 android:text="1-10" />
 
             <CheckBox
@@ -202,6 +203,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/azure"
+                android:fontFamily="@font/poppins"
                 android:text="10-20" />
 
             <CheckBox
@@ -209,6 +211,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/azure"
+                android:fontFamily="@font/poppins"
                 android:text="20-50" />
 
             <CheckBox
@@ -216,6 +219,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/azure"
+                android:fontFamily="@font/poppins"
                 android:text="50+" />
 
             <CheckBox
@@ -223,6 +227,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/azure"
+                android:fontFamily="@font/poppins"
                 android:checked="true"
                 android:text="All" />
         </GridLayout>
@@ -297,6 +302,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:buttonTint="@color/azure"
+                            android:fontFamily="@font/poppins"
                             android:text="Completed" />
 
                         <CheckBox
@@ -304,6 +310,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:buttonTint="@color/azure"
+                            android:fontFamily="@font/poppins"
                             android:text="Pending" />
 
                         <CheckBox
@@ -311,6 +318,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:buttonTint="@color/azure"
+                            android:fontFamily="@font/poppins"
                             android:text="Ongoing" />
 
                         <CheckBox
@@ -318,6 +326,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:buttonTint="@color/azure"
+                            android:fontFamily="@font/poppins"
                             android:text="Drop" />
 
                         <CheckBox
@@ -326,6 +335,7 @@
                             android:layout_height="wrap_content"
                             android:buttonTint="@color/azure"
                             android:checked="true"
+                            android:fontFamily="@font/poppins"
                             android:text="All" />
                     </GridLayout>
                 </FrameLayout>
