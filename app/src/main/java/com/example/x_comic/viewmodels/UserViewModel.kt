@@ -28,13 +28,13 @@ class UserViewModel: ViewModel() {
                 var dob = snapshot.child("dob").value as String
                 var email = snapshot.child("email").value as String
                 var follow = snapshot.child("follow").value as Long
-                var is_hide = snapshot.child("is_hide").value as Boolean
+                var hide = snapshot.child("hide").value as Boolean
                 var penname = snapshot.child("penname").value as String
                 var phone = snapshot.child("phone").value as String
                 var gender = snapshot.child("gender").value as String
                 var role = snapshot.child("role").value as Long
 
-                _user.value = User(id, full_name, age, avatar, bio, dob, email, follow, is_hide, penname, phone, gender, role)
+                _user.value = User(id, full_name, age, avatar, bio, dob, email, follow, hide, penname, phone, gender, role)
             }
             override fun onCancelled(error: DatabaseError) {
                 // Xử lý lỗi

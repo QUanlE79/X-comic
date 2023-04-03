@@ -10,7 +10,7 @@ class User
     var dob: String = ""
     var email: String = ""
     var follow: Long = 0
-    var is_hide: Boolean = true
+    var hide: Boolean = true
     var penname: String = ""
     var phone: String = ""
     var gender: String = "male"
@@ -24,7 +24,7 @@ class User
         dob: String = "",
         email: String = "",
         follow: Long = 0,
-        is_hide: Boolean = true,
+        hide: Boolean = true,
         penname: String = "",
         phone: String = "",
         gender: String = "male",
@@ -38,7 +38,7 @@ class User
         this.dob = dob
         this.email = email
         this.follow = follow
-        this.is_hide = is_hide
+        this.hide = hide
         this.penname = penname
         this.phone = phone
         this.gender = gender
